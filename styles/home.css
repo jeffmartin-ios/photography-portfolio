@@ -4,7 +4,7 @@
     grid-gap: 12px;
     max-width: 100%; /* Ensure grid doesn't exceed body width */
     margin: 0 auto; /* Center the grid horizontally */
-    padding: 32px 0; /* Add top and bottom padding of 32px */
+    padding-bottom: 32px;
 }
 
 .grid-item:nth-child(-n + 2) { /* Target the first two photos */
@@ -36,4 +36,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain; /* Ensure the image fits within the link without distortion */
+    padding-top: 32px;
+    padding-bottom: 8px;
 }
