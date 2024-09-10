@@ -3,7 +3,6 @@
     justify-content: space-between; /* Align items to left and right */
     align-items: center; /* Vertically center items */
     padding: 10px; /* Add some padding */
-    background-color: #f0f0f0; /* Light background */
 }
 
 .menu-links {
@@ -15,8 +14,10 @@
 .menu-links li {
     display: inline; /* Display links horizontally */
     margin-right: 20px; /* Add space between links */
+    font-size: 14px;
 }
 
 .menu-title {
     font-weight: bold;
+    font-size: 20px;
 }
