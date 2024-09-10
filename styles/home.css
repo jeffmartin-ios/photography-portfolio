@@ -1,7 +1,8 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed */
-    grid-gap: 10px; /* Adjust gap between photos */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(3, 1fr); /* Three rows to accommodate 5 photos with extra space */
+    grid-gap: 10px; 
 }
 
 .grid-item {
