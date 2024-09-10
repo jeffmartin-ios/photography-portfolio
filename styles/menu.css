@@ -1,0 +1,22 @@
+.menu {
+    display: flex;
+    justify-content: space-between; /* Align items to left and right */
+    align-items: center; /* Vertically center items */
+    padding: 10px; /* Add some padding */
+    background-color: #f0f0f0; /* Light background */
+}
+
+.menu-links {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links li {
+    display: inline; /* Display links horizontally */
+    margin-right: 20px; /* Add space between links */
+}
+
+.menu-title {
+    font-weight: bold;
+}
