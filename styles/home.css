@@ -1,10 +1,21 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for the first two rows */
-    grid-template-rows: repeat(2, 1fr) 1fr; /* Two equal height rows, then a third row */
-    grid-gap: 10px; 
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 12px;
+    max-width: 100%; /* Ensure grid doesn't exceed body width */
+    margin: 0 auto; /* Center the grid horizontally */
 }
 
-.grid-item:nth-child(5) { /* Target the fifth photo */
-    grid-column: 1 / span 2; /* Span both columns in the third row */
+.grid-item:nth-child(-n + 4) {
+    grid-row: auto / span 1; /* First 4 items span 1 row */
+}
+
+.grid-item:nth-child(5) {
+    grid-column: 1 / span 2; /* Fifth item spans both columns */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
 }
