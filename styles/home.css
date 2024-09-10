@@ -1,16 +1,10 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-template-rows: repeat(3, 1fr); /* Three rows to accommodate 5 photos with extra space */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the first two rows */
+    grid-template-rows: repeat(2, 1fr) 1fr; /* Two equal height rows, then a third row */
     grid-gap: 10px; 
 }
 
-.grid-item {
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Maintain aspect ratio and cover container */
+.grid-item:nth-child(5) { /* Target the fifth photo */
+    grid-column: 1 / span 2; /* Span both columns in the third row */
 }
