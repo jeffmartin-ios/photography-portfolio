@@ -1,0 +1,23 @@
+.container {
+    overflow: hidden; /* Clear floats */
+}
+
+.left-column, .right-column {
+    width: 50%;
+    float: left;
+    box-sizing: border-box; /* Include padding and border in width */
+    padding: 20px; /* Add some space around content */
+}
+
+.right-column img {
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    height: auto;
+}
+
+/* Optional: Add some responsive styling */
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        width: 100%;
+        float: none;
+    }
+}
