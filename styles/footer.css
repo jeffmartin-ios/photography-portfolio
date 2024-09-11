@@ -1,6 +1,7 @@
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #f0f0f0; /* Light background */
-    margin-top: 20px; /* Add some space above the footer */
+    margin-top: 128px;
+    color: #b0b0b0;
+    text-transform: uppercase;
 }

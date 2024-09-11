@@ -1,13 +1,41 @@
 body {
     padding: 24px;
+    background-color: black;
+    color: white;
 }
 
-.handjet {
-  font-family: "Handjet", sans-serif;
+.noto-sans-regular {
+  font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "ELGR" 1,
-    "ELSH" 2;
+}
+
+.noto-sans-semibold {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p a {
+ text-decoration: underline;
+ color: #c0c0c0;
+ transition: color 0.4s ease;
+}
+
+p a:hover {
+  color: #888;
+}
+
+a img:hover {
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
 }
