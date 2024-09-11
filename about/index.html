@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Jeff Martin Photography</title>
+    <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <link rel="stylesheet" href="../styles/about.css">
     <link rel="stylesheet" href="../styles/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="noto-sans-regular">
     <nav class="menu">
-        <ul class="menu-links">
-            <li><a href="/about/">About</a></li>
-            <li><a href="/portfolio/">Portfolio</a></li>
+        <ul class="menu-links oswald">
+            <li><a href="../">Home</a></li>
+            <li><a href="." id="menu-link-active">About</a></li>
+            <li><a href="portfolio/">Portfolio</a></li>
             <li><a href="https://www.etsy.com/ca/shop/JeffMPhotoStudio" target="_blank">Buy Prints</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="contact/">Contact</a></li>
         </ul>
-        <h1 class="menu-title">Jeff Martin Photography</h1> 
+        <h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1> 
     </nav>
     
     <div class="container">
         <div class="left-column">
-            <p>
-              Jeff Martin is a travel and street photographer based in Canada, and photographing the vibrant and busy alleys and nightlife of Asia. Jeff focuses on street landscapes, architecture, and occasionally people, that showcase the essence and soul of the city.
+            <p class="about-me">
+              Jeff is a travel and street photographer based in Canada, and photographing the vibrant and busy alleys and nightlife of Asia. Jeff focuses on street landscapes, architecture, and occasionally people, that showcase the essence and soul of the city.
             </p>
 
-            <p>
+            <p class="about-me-outro">
               To view Jeff’s work, you can find his larger collection of photos on his <a href="https://www.instagram.com/jeffm.jpg/" target="_blank">Instagram page</a>, or a finer selection of curated shots on his <a href="../portfolio/">portfolio</a>.
             </p>
         </div>
         <div class="right-column">
-            <img src="/photos/portfolio/dotonbori-alley.jpg" alt="About Image">
+            <img src="../photos/portfolio/dotonbori-alley.jpg" alt="About Image">
         </div>
     </div>
 

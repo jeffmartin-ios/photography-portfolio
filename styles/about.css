@@ -14,6 +14,17 @@
     height: auto;
 }
 
+.about-me {
+    font-size: 28px;
+    line-height: 56px;
+}
+
+.about-me-outro {
+    font-size: 16px;
+    line-height: 32px;
+    color: #a0a0a0;
+}
+
 /* Optional: Add some responsive styling */
 @media (max-width: 768px) {
     .left-column, .right-column {
