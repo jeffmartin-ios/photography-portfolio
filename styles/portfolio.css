@@ -15,7 +15,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
     max-width: 900px; 
-    /* margin: 20px auto; */
 }
 
 .portfolio-menu-grid-item {
@@ -111,4 +110,11 @@
     right: 10px;
     font-size: 30px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) { 
+    .portfolio-menu-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        max-width: 60%;
+    }
 }
