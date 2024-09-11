@@ -1,9 +1,10 @@
 body {
     padding: 24px;
-    background-color: black;
-    color: white;
+    color: #333;
+    background-color: #f5f5f5;
 }
 
+/* Fonts */
 .noto-sans-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
@@ -25,9 +26,58 @@ body {
   font-style: normal;
 }
 
+.merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Links */
 p a {
  text-decoration: underline;
- color: #c0c0c0;
+ color: #444;
  transition: color 0.4s ease;
 }
 
