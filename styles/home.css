@@ -47,5 +47,13 @@
     font-size: 28px;
     width: 75%;
     margin: 0 auto;
-    colour: #444;
+    color: #444;
+}
+
+@media (max-width: 768px) {    
+    .outro {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
 }

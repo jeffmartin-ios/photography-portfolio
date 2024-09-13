@@ -13,7 +13,11 @@
 }
 
 .menu a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-links a {
     color: #707070;
     transition: color 0.4s ease;
 }
@@ -50,7 +54,7 @@
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+@media (max-width: 768px) {
     .menu {
         flex-direction: column;
         align-items: flex-start;
