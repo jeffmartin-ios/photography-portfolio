@@ -117,6 +117,13 @@
 @media (max-width: 768px) { 
     .portfolio-menu-grid {
         grid-template-columns: 1fr; /* Single column on mobile */
-        max-width: 60%;
+        max-width: 90%;
+        grid-gap: 120px;
+        margin: 0 auto;
+    }
+
+    .portfolio-menu-grid-item {
+        text-align: center;
+        height: 600px;
     }
 }
