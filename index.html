@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeff Martin Photography</title>
+    <!-- Your existing CSS files -->
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/footer.css">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="noto-sans-regular">
+
+    <!-- Overlay for main content when menu is open -->
+    <div id="menu-overlay" class="overlay"></div>
+
+    <!-- Navigation Menu -->
     <nav class="menu">
         <div class="menu-top">
             <a href="."><h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1></a>
-            <div class="hamburger">
+            <!-- Hamburger button - now has an ID for JavaScript -->
+            <button class="hamburger" id="hamburger-button" aria-label="Open navigation menu">
                 <div class="hamburger-icon"></div>
-            </div>
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+            </button>
         </div>
-        <ul class="menu-links oswald">
+
+        <!-- Off-canvas Menu Links Container -->
+        <ul class="menu-links oswald" id="menu-links">
+            <!-- Close button for the off-canvas menu -->
+            <button class="close-menu" id="close-menu-button" aria-label="Close navigation menu">
+                &times; <!-- 'x' character for close icon -->
+            </button>
             <li><a href="." id="menu-link-active">Home</a></li>
             <li><a href="about/">About</a></li>
             <li><a href="travel/">Travel</a></li>
@@ -32,40 +48,89 @@
         </ul>
     </nav>
 
+    <!-- Social Links Container -->
     <div class="social-links-container">
-        <a href="https://www.instagram.com/jeffm.jpg/" target="_blank" class="instagram-link">
-            <img src="assets/Instagram_Glyph_Black.png" alt="Instagram Link"> 
+        <a href="https://www.instagram.com/jeffm.jpg/" target="_blank" class="instagram-link" aria-label="Visit Jeff Martin's Instagram profile">
+            <!-- Inline SVG for Instagram Icon (replaces image) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
         </a>
     </div>
     
+    <!-- Main Image Grid Content -->
     <div class="grid-container">
         <div class="grid-item">
-            <img src="photos/portfolio/japan/dotonbori-crowd-1.jpg">
+            <img src="photos/portfolio/japan/dotonbori-crowd-1.jpg" alt="A large crowd of people walking through Dotonbori, Osaka at night, with neon signs">
         </div>
         <div class="grid-item">
-            <img src="photos/portfolio/singapore/stairs.jpg">
+            <img src="photos/portfolio/singapore/stairs.jpg" alt="A person ascending a colorful, art-deco styled staircase in Singapore">
         </div>
         <div class="grid-item">
-            <img src="photos/portfolio/thailand/bridge-jatujak.jpg">
+            <img src="photos/portfolio/thailand/bridge-jatujak.jpg" alt="A wooden bridge crossing a canal in Chatuchak Market, Bangkok, Thailand">
         </div>
         <div class="grid-item">
-            <img src="photos/portfolio/singapore/jewel-waterfall.jpg">
+            <img src="photos/portfolio/singapore/jewel-waterfall.jpg" alt="The HSBC Rain Vortex, a large indoor waterfall at Jewel Changi Airport in Singapore">
         </div>
         <div class="grid-item">
-            <img src="photos/portfolio/japan/yodobashi-sign-1.jpg">
+            <img src="photos/portfolio/japan/yodobashi-sign-1.jpg" alt="A vibrant, multi-colored Yodobashi Camera sign illuminated at night in Tokyo, Japan">
+        </div>
+        <div class="grid-item">
+            <img src="photos/portfolio/japan/tokyo-streets.jpg" alt="Busy streets of Tokyo with pedestrian crossings and tall buildings">
         </div>
     </div>
 
+    <!-- Outro Section -->
     <div class="outro merriweather-regular">
         <p>
             Jeff Martin is a travel and cityscape photographer based in Toronto. Have a project in mind? <a href="mailto:jeffmartin.photos@gmail.com">Let's work together</a>.
         </p>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; Jeff Martin 2017 - 2024</p>
     </footer>
 
-    <script src="scripts/common.js"></script>
+    <!-- JavaScript for Hamburger Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const menuLinks = document.getElementById('menu-links');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            // Function to open the menu
+            function openMenu() {
+                menuLinks.classList.add('open');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling on main content
+            }
+
+            // Function to close the menu
+            function closeMenu() {
+                menuLinks.classList.remove('open');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Event Listeners
+            if (hamburgerButton) {
+                hamburgerButton.addEventListener('click', openMenu);
+            } else {
+                console.error("Hamburger button not found.");
+            }
+
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', closeMenu);
+            } else {
+                console.error("Close menu button not found.");
+            }
+
+            if (menuOverlay) {
+                menuOverlay.addEventListener('click', closeMenu);
+            } else {
+                console.error("Menu overlay not found.");
+            }
+        });
+    </script>
 </body>
 </html>
