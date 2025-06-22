@@ -1,14 +1,30 @@
 .menu {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between; /* Align items to left and right */
     align-items: center; /* Vertically center items */
     padding: 10px; /* Add some padding */
     text-transform: uppercase;
 }
 
+.menu-top { /* New class to group title and hamburger */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hamburger {
+    display: block;
+}
+
 .menu-links {
+    display: none;
+    width: 100%;
     list-style: none; /* Remove bullet points */
     margin: 0;
+    margin-top: 10px;
     padding: 0;
 }
 
