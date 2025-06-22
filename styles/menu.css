@@ -1,71 +1,128 @@
+/* Base styles for the navigation menu container */
 .menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Keep column layout for title and hamburger */
     align-items: flex-start;
-    justify-content: space-between; /* Align items to left and right */
-    align-items: center; /* Vertically center items */
-    padding: 10px; /* Add some padding */
+    padding: 10px;
     text-transform: uppercase;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 100;
 }
 
-.menu-top { /* New class to group title and hamburger */
+.menu-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.hamburger {
-    display: block;
-}
-
-.menu-links {
-    display: none;
-    width: 100%;
-    list-style: none; /* Remove bullet points */
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-}
-
-.menu a {
-    text-decoration: none;
+.menu-title {
+    font-size: 24px;
     color: #333;
 }
 
-.menu-links a {
-    color: #707070;
-    transition: color 0.4s ease;
+/* Hamburger button styles - always block now */
+.hamburger {
+    display: block; /* Always show hamburger */
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+    outline: none;
 }
 
-.menu a:hover {
-    color: #222;
+/* Styles for the hamburger icon lines */
+.hamburger-icon {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Menu links container - off-canvas sidebar for all screen sizes */
+.menu-links {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Initially hidden off-screen to the right */
+    width: 300px; /* Width of the off-canvas menu */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    padding-top: 60px; /* Space for the close button at the top */
+    transition: right 0.3s ease-in-out;
+    z-index: 200;
+    display: flex; /* Flexbox for vertical list */
+    flex-direction: column;
+    overflow-y: auto; /* Enable scrolling if menu content is too long */
+}
+
+/* Class to show the off-canvas menu */
+.menu-links.open {
+    right: 0; /* Slide into view */
 }
 
 .menu-links li {
-    display: inline; /* Display links horizontally */
-    margin-right: 20px; /* Add space between links */
-    font-size: 18px;
+    display: block; /* Make list items stack vertically */
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
-.menu-title {
-    font-size: 24px;
+.menu-links a {
+    text-decoration: none;
+    color: #707070;
+    transition: color 0.4s ease;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-links li:last-child a {
+    border-bottom: none;
+}
+
+.menu-links a:hover {
+    color: #222;
 }
 
 #menu-link-active {
     color: #222;
+    font-weight: bold;
 }
 
-/* Hamburger button styles */
-.hamburger {
-    display: none; 
+/* Close button for the off-canvas menu */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
     cursor: pointer;
+    color: #333;
+    z-index: 210;
+    background: none;
+    border: none;
+    outline: none;
 }
 
-.hamburger-icon {
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6h16M4 12h16m-7 6h7' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none' /%3E%3C/svg%3E");
-    background-size: contain;
+/* Overlay for main content when menu is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 150;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
 }
 
+.overlay.active {
+    display: block;
+}
