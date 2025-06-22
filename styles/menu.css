@@ -69,31 +69,3 @@
     background-size: contain;
 }
 
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-top { /* New class to group title and hamburger */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .hamburger {
-        display: block; /* Show the hamburger button on mobile */
-    }
-
-    .menu-links {
-        display: none; /* Initially hide the links */
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .menu-links.show {
-        display: block; /* Show the links when the menu is open */
-    }
-}
