@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // We are on GitHub Pages. The root path is the repository name.
         // e.g., /photography-portfolio/
         const repoName = pathname.split('/')[1] || '';
-        siteRoot = repoName ? `/${repoName}/` : '/';
+        siteRoot = repoName ? `/${repoName}/photography-portfolio/` : '/';
     } else {
         // We are on a local server or a custom domain. The root is simply "/".
         siteRoot = '/';
