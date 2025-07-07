@@ -1,5 +1,7 @@
+<!-- Navigation Menu -->
 <nav class="menu">
     <div class="menu-top">
+        <!-- This link now starts with "/" -->
         <a href="/"><h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1></a>
         <button class="hamburger" id="hamburger-button" aria-label="Open navigation menu">
             <div class="hamburger-icon"></div>
@@ -9,17 +11,23 @@
     </div>
 </nav>
 
+<!-- The Off-canvas Menu Sidebar -->
 <ul class="menu-links oswald" id="menu-links">
-    <button class="close-menu" id="close-menu-button" aria-label="Close navigation menu">
-        &times;
-    </button>
+    <button class="close-menu" id="close-menu-button" aria-label="Close navigation menu">&times;</button>
+    <!-- All these links now start with "/" -->
     <li><a href="/">Home</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/travel/">Travel</a></li>
+    <li><a href="/photoshoots/">Photoshoots</a></li>
     <li><a href="/weddings-events/">Weddings &amp; Events</a></li>
     <li><a href="/work-with-me/">Work With Me</a></li>
+    <!-- External links are unaffected -->
+    <li><a href="https://www.etsy.com/ca/shop/JeffMPhotoStudio" target="_blank">Buy Prints</a></li>
     <li class="social-links-item">
         <div class="social-links-container">
-            </div>
+            <a href="https://www.instagram.com/jeffm.jpg/" target="_blank" aria-label="Visit Jeff Martin's Instagram profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+        </div>
     </li>
 </ul>

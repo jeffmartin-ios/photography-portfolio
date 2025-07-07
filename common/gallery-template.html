@@ -1,0 +1,86 @@
+<!-- Replace this with actual gallery contents -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: Change the title for your new gallery -->
+    <title>Gallery - Jeff Martin Photography</title>
+
+    <!-- 
+        TODO: IMPORTANT! Update the relative paths below.
+        - If this file is 1 folder deep (e.g., /about/), use "../"
+        - If this file is 2 folders deep (e.g., /travel/japan/), use "../../"
+        - If this file is 3 folders deep (e.g., /photoshoots/galleries/client/), use "../../../"
+    -->
+    <link rel="stylesheet" href="../../styles/common.css">
+    <link rel="stylesheet" href="../../styles/menu.css">
+    <link rel="stylesheet" href="../../styles/gallery-page.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="noto-sans-regular">
+
+    <!-- Reusable Menu Components -->
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <main class="content-wrapper">
+        <!-- TODO: Update the breadcrumb link and text -->
+        <div class="breadcrumb-nav">
+            <a href="../../travel/">&larr; Back to All Galleries</a>
+        </div>
+
+        <!-- Section 1: Hero Introduction -->
+        <header class="gallery-hero merriweather-regular">
+            <!-- TODO: Replace with the actual gallery name -->
+            <h1>[Gallery Name]</h1>
+            <!-- TODO: Replace with a short, engaging description of the gallery -->
+            <p class="subtitle">[A short description of the collection, event, or destination.]</p>
+        </header>
+
+        <!-- Section 2: The Photo Gallery -->
+        <div class="photo-grid">
+            <!-- 
+              TODO: Add your images here. 
+              - Remember to update the relative path for each image src.
+              - Add classes "wide" or "tall" to items for a dynamic layout.
+            -->
+            <div class="grid-item wide">
+                <img src="../../path/to/your/image-1.jpg" alt="Description of image 1.">
+            </div>
+            <div class="grid-item">
+                <img src="../../path/to/your/image-2.jpg" alt="Description of image 2.">
+            </div>
+            <div class="grid-item tall">
+                <img src="../../path/to/your/image-3.jpg" alt="Description of image 3.">
+            </div>
+             <div class="grid-item">
+                <img src="../../path/to/your/image-4.jpg" alt="Description of image 4.">
+            </div>
+        </div>
+    </main>
+    
+    <!-- Lightbox for viewing full-size images -->
+    <div class="zoomed-image"> 
+        <img src="" alt="Zoomed View">
+        <span class="close-button">&times;</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
+    </footer>
+
+    <!-- 
+        TODO: Update the relative paths for the scripts below.
+    -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/gallery.js"></script>
+
+</body>
+</html>
