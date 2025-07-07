@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Fetch the Menu ---
-    const menuUrl = `${siteRoot}common/_menu.html`;
+    const menuUrl = `${siteRoot}common/menu.html`;
     
     fetch(menuUrl)
         .then(response => {
