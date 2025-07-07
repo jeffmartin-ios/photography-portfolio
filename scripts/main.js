@@ -6,13 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const pathname = window.location.pathname;
     const siteRoot = '/';
 
-    // if (hostname.includes('jeffmartin.photos')) {
-    //     siteRoot = `/photography-portfolio/`;
-    // } else {
-    //     // We are on a local server or a custom domain. The root is simply "/".
-    //     siteRoot = '/';
-    // }
-
     // --- Fetch the Menu ---
     const menuUrl = `${siteRoot}common/menu.html`;
     
