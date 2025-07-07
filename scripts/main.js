@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let siteRoot;
 
     if (hostname.includes('jeffmartin.photos')) {
-        siteRoot = `/${repoName}/photography-portfolio/`;
+        siteRoot = `/photography-portfolio/`;
     } else {
         // We are on a local server or a custom domain. The root is simply "/".
         siteRoot = '/';
