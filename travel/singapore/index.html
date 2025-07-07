@@ -3,77 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff Martin Photography</title>
+    <title>Singapore - Travel Photography</title>
+
     <link rel="stylesheet" href="../../styles/common.css">
     <link rel="stylesheet" href="../../styles/menu.css">
-    <link rel="stylesheet" href="../../styles/portfolio.css">
-    <link rel="stylesheet" href="../../styles/footer.css">
+
+    <link rel="stylesheet" href="../../styles/gallery-page.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="noto-sans-regular">
-    <nav class="menu">
-        <div class="menu-top">
-            <a href="../../"><h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1></a>
-            <div class="hamburger">
-                <div class="hamburger-icon"></div>
+
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <main class="content-wrapper">
+        <div class="breadcrumb-nav">
+            <a href="../">&larr; Back to Travel Galleries</a>
+        </div>
+
+        <header class="gallery-hero merriweather-regular">
+            <h1>Singapore</h1>
+            <p class="subtitle">Exploring the vibrant intersection of nature and metropolis in the Lion City.</p>
+        </header>
+
+        <div class="photo-grid">
+            <div class="grid-item tall">
+                <img src="../../photos/portfolio/singapore/jewel-waterfall.jpg" alt="The HSBC Rain Vortex, a large indoor waterfall at Jewel Changi Airport.">
+            </div>
+            <div class="grid-item wide">
+                <img src="../../photos/portfolio/singapore/supertree.jpg" alt="A wide shot of the iconic Supertree Grove at Gardens by the Bay, lit up at night.">
+            </div>
+             <div class="grid-item">
+                <img src="../../photos/portfolio/singapore/stairs.jpg" alt="A person ascending a colorful, art-deco styled staircase.">
+            </div>
+            <div class="grid-item">
+                <img src="../../photos/portfolio/singapore/hawkercentre-shrine.jpg" alt="A small, colorful shrine nestled within a busy hawker centre.">
+            </div>
+            <div class="grid-item">
+                <img src="../../photos/portfolio/singapore/garden-eagle.jpg" alt="A statue of an eagle with wings spread in a lush green garden.">
             </div>
         </div>
-        <ul class="menu-links oswald">
-            <li><a href="../../" id="menu-link-active">Home</a></li>
-            <li><a href="../../about/">About</a></li>
-            <li><a href="../">Travel</a></li>
-            <li><a href="../../photoshoots/">Photoshoots</a></li>
-            <li><a href="../../events-weddings/">Events &amp; Weddings</a></li>
-            <li><a href="../../work-with-me/">Work With Me</a></li>
-            <li><a href="https://www.etsy.com/ca/shop/JeffMPhotoStudio" target="_blank">Buy Prints</a></li>
-        </ul>
-    </nav>
-
-    <div class="portfolio-title-container merriweather-regular">
-        <h1 class="portfolio-title">Singapore</h1>
-    </div>
+    </main>
     
-    <div class="grid-container">
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/singapore/supertree.jpg" alt="Photo of Supertree">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/singapore/hawkercentre-shrine.jpg" alt="Photo of Hawker Centre Shrine">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/singapore/garden-eagle.jpg" alt="Photo of Garden">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/singapore/jewel-waterfall.jpg" alt="Photo of Changi Jewel">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/singapore/stairs.jpg" alt="Photo of Stairs with Person">
-            </a>
-        </div>
-    </div>
-
     <div class="zoomed-image"> 
-        <img src="" alt="Zoomed Image">
+        <img src="" alt="Zoomed View">
         <span class="close-button">&times;</span>
     </div>
 
     <footer>
-        <p>&copy; Jeff Martin 2017 - 2024</p>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
     </footer>
 
-    <script src="../../scripts/portfolio.js"></script>
-    <script src="../../scripts/common.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/gallery.js"></script>
+
 </body>
 </html>

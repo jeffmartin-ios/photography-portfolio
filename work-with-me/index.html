@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work With Me - Jeff Martin Photography</title>
+
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/menu.css">
+    <link rel="stylesheet" href="/styles/work-with-me.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="noto-sans-regular">
+
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <main class="content-wrapper">
+        <header class="work-hero merriweather-regular">
+            <h1>Let's Create Something Beautiful</h1>
+            <p class="subtitle">I specialize in capturing authentic moments and stunning visuals. Whether it's a personal photoshoot, a once-in-a-lifetime event, or a commercial project, I'm here to bring your vision to life.</p>
+            <a href="#contact" class="cta-button oswald">Get In Touch</a>
+        </header>
+
+        <section class="services-grid">
+            <a href="/photoshoots/" class="service-card-link">
+                <div class="service-card">
+                    <div class="card-content">
+                        <h3 class="oswald">Photoshoots</h3>
+                        <p>Creative and personal sessions for portraits, lifestyle, branding, and fashion. Let's capture your unique story.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/weddings-events/" class="service-card-link">
+                <div class="service-card">
+                    <img src="../../photos/weddings-events/thumbnails/lean-day-wedding.jpg">
+                    <div class="card-content">
+                        <h3 class="oswald">Weddings &amp; Events</h3>
+                        <p>Documenting your special day with care and artistry, capturing the candid moments and timeless memories you'll cherish forever.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/travel/" class="service-card-link">
+                <div class="service-card">
+                    <img src="../../photos/portfolio/japan/fujisan-railroads-1.jpg">
+                    <div class="card-content">
+                        <h3 class="oswald">Travel &amp; Cityscape</h3>
+                        <p>Available for editorial and commercial assignments to capture the essence of a destination through impactful imagery.</p>
+                    </div>
+                </div>
+            </a>
+
+        </section>
+
+        <!-- <section class="testimonials merriweather-regular">
+            <h2>What Clients Say</h2>
+            <blockquote>
+                <p>"TBD"</p>
+                <cite>— Testimonial</cite>
+            </blockquote>
+        </section> -->
+
+        <section id="contact" class="contact-section">
+            <h2 class="oswald">Get In Touch</h2>
+            <p>I'm available for weddings &amp; events based in Toronto and travel projects worldwide. Fill out the form below to draft an email with your project details.</p>
+            
+            <form id="contact-form-mailto">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="cta-button oswald">Generate Email</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
+    </footer>
+
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+/* Hero Section */
+.weddings-hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    /* TODO: Choose a great, romantic background photo */
+    background-image: url('../photos/weddings-events/thumbnails/lean-day-wedding.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.weddings-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+
+/* General page structure */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* Intro Text Section */
+.intro-text {
+    text-align: center;
+    padding: 48px 0;
+    max-width: 750px;
+    margin: 0 auto 48px auto;
+}
+.intro-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Gallery Showcase Section */
+.gallery-showcase .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px; /* Adjust height as needed */
+}
+
+.gallery-showcase h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+/* Investment Section */
+.packages-section {
+    padding: 64px 0;
+    text-align: center;
+}
+.packages-section .oswald {
+    font-size: 32px;
+}
+.packages-section .subtitle {
+    max-width: 600px;
+    margin: 16px auto 48px auto;
+    color: #555;
+    line-height: 1.6;
+}
+.packages-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    text-align: left;
+}
+.package-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 32px;
+    flex: 1;
+    max-width: 350px;
+    transition: all 0.3s ease;
+}
+.package-card.featured {
+    border-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.package-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+.package-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #444;
+}
+.package-card li {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+.package-card li::before {
+    content: '✓';
+    color: #333;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.packages-subsection {
+    margin-bottom: 128px;
+}
+
+.packages-subsection .subsection-title {
+    margin-bottom: 32px;
+}
+
+.packages-subsection .addons-card {
+    margin: 0 auto;
+    max-width: 600px;
+    box-shadow: none; /* Optional: remove shadow for a flatter look */
+    border: 1px solid #e0e0e0;
+}
+
+
+/* Service Area & CTA Sections */
+.service-area, .cta-section {
+    text-align: center;
+    padding: 64px 24px;
+    border-radius: 8px;
+    margin-top: 48px;
+}
+.service-area {
+    background-color: #fafafa;
+}
+.service-area h2, .cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.service-area p, .cta-section p {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Specific styles for the Add-Ons card */
+.addons-card {
+    /* Center the content for a more balanced look */
+    text-align: center;
+}
+
+/* Container for the new "pill" or "tag" items */
+.addon-items-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: center; /* Center the items */
+    gap: 10px; /* Space between items */
+}
+
+/* Individual Add-On Item Style */
+.addon-item {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Creates the pill shape */
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+/* --- The Process Section --- */
+.process-section {
+    padding: 64px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.process-section .oswald {
+    font-size: 32px;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: left;
+    margin-top: 48px;
+}
+
+.step-card {
+    padding: 24px;
+}
+
+.step-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #e0e0e0;
+    line-height: 1;
+}
+
+.step-card h3 {
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.step-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* --- Pricing Blurb --- */
+.pricing-blurb {
+    text-align: center;
+    margin-top: 12px;
+    padding-top: 32px;
+    border-top: 1px solid #eee;
+}
+
+.pricing-blurb p {
+    font-size: 17px;
+    font-style: italic;
+    color: #555;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 36px; }
+    .gallery-showcase .photo-grid { grid-template-columns: 1fr; }
+    .packages-container { flex-direction: column; align-items: center; }
+    .package-card.featured { transform: scale(1); }
+    .process-steps {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

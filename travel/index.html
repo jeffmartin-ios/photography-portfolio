@@ -3,78 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff Martin Photography</title>
+    <title>Travel Photography - Jeff Martin</title>
+    
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/menu.css">
-    <link rel="stylesheet" href="../styles/portfolio.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+
+    <link rel="stylesheet" href="../styles/travel.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="noto-sans-regular">
-    <nav class="menu">
-        <div class="menu-top">
-            <a href="../"><h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1></a>
-            <div class="hamburger">
-                <div class="hamburger-icon"></div>
+
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <main class="content-wrapper">
+        <header class="travel-hero merriweather-regular">
+            <h1>Travel Photography</h1>
+            <p class="subtitle">A curated portfolio of work from around the world. Available for assignment.</p>
+        </header>
+
+        <section class="travel-services">
+            <h2 class="section-title oswald">Services</h2>
+            <div class="service-cards-container">
+                <div class="service-card">
+                    <h3 class="oswald">Editorial &amp; Publications</h3>
+                    <p>Creating compelling photo essays and cover-worthy images that capture the unique essence of a destination for magazines and online publications.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="oswald">Brand &amp; Commercial</h3>
+                    <p>High-quality, professional imagery for hotels, tourism boards, and travel companies to use in marketing campaigns, social media, and promotional materials.</p>
+                </div>
             </div>
-        </div>
-        <ul class="menu-links oswald">
-            <li><a href="../" id="menu-link-active">Home</a></li>
-            <li><a href="../about/">About</a></li>
-            <li><a href=".">Travel</a></li>
-            <li><a href="../photoshoots/">Photoshoots</a></li>
-            <li><a href="../events-weddings/">Events &amp; Weddings</a></li>
-            <li><a href="../work-with-me/">Work With Me</a></li>
-            <li><a href="https://www.etsy.com/ca/shop/JeffMPhotoStudio" target="_blank">Buy Prints</a></li>
-        </ul>
-    </nav>
+        </section>
 
-    <div class="portfolio-title-container merriweather-regular">
-        <p class="portfolio-intro">A selected curation of my photography around the world</p>
-    </div>
-    
-    <div class="portfolio-menu-grid merriweather-regular">
-        <div class="portfolio-menu-grid-item">
-            <a href="japan/">
-                <h3>Japan</h3>
-                <img src="../photos/portfolio/japan/shibuyacrossing-1.jpg" alt="Japan Portfolio">
-            </a>
-        </div>
-        <div class="portfolio-menu-grid-item">
-            <a href="singapore/">
-                <h3>Singapore</h3>
-                <img src="../photos/portfolio/singapore/supertree.jpg" alt="Singapore Portfolio">
-            </a>
-        </div>
-        <div class="portfolio-menu-grid-item">
-            <a href="thailand/">
-                <h3>Thailand</h3>
-                <img src="../photos/portfolio/thailand/bridge-jatujak.jpg" alt="Thailand Portfolio">
-            </a>
-        </div>
-        <!-- <div class="portfolio-menu-grid-item"></div>
-            <h3>TBA</h3>
-            <img src="../photos/portfolio/japan/shibuyacrossing-1.jpg" alt="Iceland Portfolio">
-        </div>
-        <div class="portfolio-menu-grid-item">
-            <h3>TBA</h3>
-            <img src="../photos/portfolio/japan/shibuyacrossing-1.jpg" alt="New Portfolio">
-        </div> -->
-    </div>
+        <section class="portfolio-showcase">
+            <h2 class="section-title oswald">Explore the Galleries</h2>
+            <div class="portfolio-grid">
+                <a href="japan/" class="portfolio-card">
+                    <img src="../photos/portfolio/japan/shibuyacrossing-1.jpg" alt="A busy street crossing in Shibuya, Tokyo.">
+                    <div class="card-overlay"><h3 class="oswald">Japan</h3></div>
+                </a>
+                <a href="singapore/" class="portfolio-card">
+                    <img src="../photos/portfolio/singapore/supertree.jpg" alt="The Supertree Grove at Gardens by the Bay, Singapore.">
+                    <div class="card-overlay"><h3 class="oswald">Singapore</h3></div>
+                </a>
+                <a href="thailand/" class="portfolio-card">
+                    <img src="../photos/portfolio/thailand/bridge-jatujak.jpg" alt="A wooden bridge in a market in Bangkok, Thailand.">
+                    <div class="card-overlay"><h3 class="oswald">Thailand</h3></div>
+                </a>
+            </div>
+        </section>
 
-    <div class="zoomed-image"> 
-        <img src="" alt="Zoomed Image">
-        <span class="close-button">&times;</span>
-    </div>
+        <section class="process-section">
+            <h2 class="section-title oswald">The Process</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Discovery &amp; Planning</h3>
+                    <p>We'll start with a detailed brief to understand your project goals, desired shot list, brand guidelines, and logistical needs for the assignment.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>The Assignment</h3>
+                    <p>On location, my focus is on executing the plan with creativity and professionalism, capturing both the planned shots and spontaneous, authentic moments.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Delivery &amp; Licensing</h3>
+                    <p>You will receive a curated gallery of high-resolution, professionally edited images, delivered on time with clear licensing for your intended use.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2 class="oswald">Have a Destination in Mind?</h2>
+            <p class="merriweather-regular">If you have a project that requires compelling visual storytelling from anywhere in the world, I'd love to discuss it with you.</p>
+            <a href="mailto:jeffmartin.photos@gmail.com?subject=Travel%20Photography%20Assignment" class="cta-button oswald">Inquire About an Assignment</a>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; Jeff Martin 2017 - 2024</p>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
     </footer>
 
-    <script src="../scripts/portfolio.js"></script>
-    <script src="../scripts/common.js"></script>
+    <script src="../scripts/main.js"></script>
+    
 </body>
 </html>

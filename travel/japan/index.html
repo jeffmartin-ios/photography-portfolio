@@ -3,77 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff Martin Photography</title>
+    <title>Japan - Travel Photography</title>
+
     <link rel="stylesheet" href="../../styles/common.css">
     <link rel="stylesheet" href="../../styles/menu.css">
-    <link rel="stylesheet" href="../../styles/portfolio.css">
-    <link rel="stylesheet" href="../../styles/footer.css">
-
+    <link rel="stylesheet" href="../../styles/gallery-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="noto-sans-regular">
-    <nav class="menu">
-        <div class="menu-top">
-            <a href="../../"><h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1></a>
-            <div class="hamburger">
-                <div class="hamburger-icon"></div>
+
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <main class="content-wrapper">
+        <div class="breadcrumb-nav">
+            <a href="../">&larr; Back to Travel Galleries</a>
+        </div>
+
+        <header class="gallery-hero merriweather-regular">
+            <h1>Japan</h1>
+            <p class="subtitle">From the electric energy of Tokyo's streets to the serene landscapes of Mount Fuji.</p>
+        </header>
+
+        <div class="photo-grid">
+            <div class="grid-item wide">
+                <img src="../../photos/portfolio/japan/shibuyacrossing-1.jpg" alt="A long exposure shot of Shibuya Crossing at night, with light trails from traffic and crowds of people.">
+            </div>
+            <div class="grid-item">
+                <img src="../../photos/portfolio/japan/dotonbori-crowd-1.jpg" alt="A dense crowd walking through the neon-lit Dotonbori district in Osaka.">
+            </div>
+            <div class="grid-item tall">
+                <img src="../../photos/portfolio/japan/fujisan-railroads-1.jpg" alt="A tranquil view of Mount Fuji looming over a quiet railroad crossing in the countryside.">
+            </div>
+            <div class="grid-item">
+                <img src="../../photos/portfolio/japan/dotonbori-alley.jpg" alt="A narrow, atmospheric alleyway in Osaka with glowing lanterns and signs.">
+            </div>
+            <div class="grid-item wide">
+                <img src="../../photos/portfolio/japan/yodobashi-sign-1.jpg" alt="A vibrant, multi-colored Yodobashi Camera sign illuminated at night in Tokyo.">
             </div>
         </div>
-        <ul class="menu-links oswald">
-            <li><a href="../../" id="menu-link-active">Home</a></li>
-            <li><a href="../../about/">About</a></li>
-            <li><a href="../">Travel</a></li>
-            <li><a href="../../photoshoots/">Photoshoots</a></li>
-            <li><a href="../../events-weddings/">Events &amp; Weddings</a></li>
-            <li><a href="../../work-with-me/">Work With Me</a></li>
-            <li><a href="https://www.etsy.com/ca/shop/JeffMPhotoStudio" target="_blank">Buy Prints</a></li>
-        </ul>
-    </nav>
-
-    <div class="portfolio-title-container merriweather-regular">
-        <h1 class="portfolio-title">Japan</h1>
-    </div>
+    </main>
     
-    <div class="grid-container">
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/japan/dotonbori-crowd-1.jpg" alt="Photo of Dotonbori Osaka Crowds">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/japan/shibuyacrossing-1.jpg" alt="Photo of Shibuya Crossing">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/japan/fujisan-railroads-1.jpg" alt="Photo of Fuji-san">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/japan/dotonbori-alley.jpg" alt="Photo of Dotonbori Alleyway">
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="#">
-                <img src="../../photos/portfolio/japan/yodobashi-sign-1.jpg" alt="Photo of Yodobashi Camera">
-            </a>
-        </div>
-    </div>
-
     <div class="zoomed-image"> 
-        <img src="" alt="Zoomed Image">
+        <img src="" alt="Zoomed View">
         <span class="close-button">&times;</span>
     </div>
 
     <footer>
-        <p>&copy; Jeff Martin 2017 - 2024</p>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
     </footer>
 
-    <script src="../../scripts/portfolio.js"></script>
-    <script src="../../scripts/common.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/gallery.js"></script>
+
 </body>
 </html>

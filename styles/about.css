@@ -1,34 +1,118 @@
-.container {
-    overflow: hidden; /* Clear floats */
+/* General page structure */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
 }
 
-.left-column, .right-column {
-    width: 50%;
-    float: left;
-    box-sizing: border-box; /* Include padding and border in width */
-    padding: 20px; /* Add some space around content */
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 48px 0;
+    margin-bottom: 64px; /* Increased bottom margin */
+    border-bottom: 1px solid #eee;
 }
 
-.right-column img {
-    max-width: 100%; /* Ensure image doesn't overflow container */
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.about-hero .subtitle {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Main Two-Column Overlapping Section */
+.about-main {
+    display: grid;
+    /* A 12-column grid provides flexibility */
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 24px; /* The gap between columns */
+    margin-bottom: 80px;
+}
+
+.about-image {
+    /* The image starts at column 7 and goes to the end */
+    grid-column: 7 / 13;
+    /* It occupies the first row of our grid */
+    grid-row: 1 / 2;
+}
+
+.about-image img {
+    width: 85%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.about-me {
-    font-size: 28px;
-    line-height: 56px;
+.about-text {
+    /* The text starts at column 1 and overlaps, ending at column 8 */
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+    /* Use z-index to make sure the text card sits ON TOP of the image */
+    z-index: 2;
+
+    /* Styling to make the text block look like a card */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.about-me-outro {
-    font-size: 16px;
-    line-height: 32px;
-    color: #707070;
+.about-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 0;
 }
 
-/* Optional: Add some responsive styling */
+.about-text p {
+    font-size: 17px; /* Slightly smaller for a more refined feel */
+    line-height: 1.9; /* More breathing room */
+    color: #444;
+    margin-bottom: 1.5em;
+}
+
+/* Final Call to Action Section */
+.about-cta {
+    text-align: center;
+    padding: 64px 24px;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+.about-cta h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.about-cta p {
+    max-width: 550px;
+    margin: 0 auto 32px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive styles for the new layout */
 @media (max-width: 768px) {
-    .left-column, .right-column {
-        width: 100%;
-        float: none;
+    .about-main {
+        /* Remove the grid layout on mobile */
+        display: block;
+    }
+
+    .about-image {
+        /* Image is no longer in a grid, so it behaves like a normal block */
+        margin-bottom: 24px; 
+    }
+
+    .about-text {
+        /* Text card takes full width */
+        padding: 24px;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
     }
 }

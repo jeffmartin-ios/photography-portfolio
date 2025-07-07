@@ -4,54 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Jeff Martin Photography</title>
+
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <link rel="stylesheet" href="../styles/about.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="noto-sans-regular">
-    <nav class="menu">
-        <div class="menu-top">
-            <a href="../"><h1 class="menu-title noto-sans-semibold">Jeff Martin Photography</h1></a>
-            <div class="hamburger">
-                <div class="hamburger-icon"></div>
+
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <main class="content-wrapper">
+        <header class="about-hero merriweather-regular">
+            <h1>About Me</h1>
+            <p class="subtitle">Photographer, storyteller, and explorer.</p>
+        </header>
+
+        <section class="about-main">
+            <div class="about-image">
+                <img src="../photos/me.jpg">
             </div>
-        </div>
-        <ul class="menu-links oswald">
-            <li><a href="../">Home</a></li>
-            <li><a href="." id="menu-link-active">About</a></li>
-            <li><a href="../portfolio/">Portfolio</a></li>
-            <li><a href="https://www.etsy.com/ca/shop/JeffMPhotoStudio" target="_blank">Buy Prints</a></li>
-        </ul>
-    </nav>
-    
-    <div class="container merriweather-regular">
-        <div class="left-column">
-            <p class="about-me">
-              Jeff is a travel and street photographer based in Canada, and photographing the vibrant and busy alleys and nightlife of Asia. Jeff focuses on street landscapes, architecture, and occasionally people, that showcase the essence and soul of the city.
-            </p>
+            <div class="about-text merriweather-regular">
+                <h2>Hey, I'm Jeff.</h2>
+                <p>
+                    Based in Toronto, I'm a photographer with a passion for storytelling. Whether I'm exploring the vibrant streets of a new city, documenting the heartfelt moments of a wedding, or crafting a personal portrait, my focus is always on capturing the essence of the moment.
+                </p>
+                <p>
+                    My goal is to create images that are not just seen, but felt. I believe the best photographs are the ones that transport you—to the quiet solitude of a misty morning or right back into the joyful energy of a celebration.
+                </p>
+                <p>
+                    This site showcases my curated galleries. For a more behind-the-scenes look at my recent work, feel free to connect with me on <a href="https://www.instagram.com/jeffm.jpg/" target="_blank">Instagram</a>.
+                </p>
+            </div>
+        </section>
 
-            <p class="about-me-outro">
-              To view Jeff’s work, you can find his larger collection of photos on his <a href="https://www.instagram.com/jeffm.jpg/" target="_blank">Instagram page</a>, or a finer selection of curated shots on his <a href="../portfolio/">portfolio</a>.
-            </p>
-
-            <p class="about-me-outro">
-              For all inquiries, email <a href="mailto:jeffmartin.photos@gmail.com">jeffmartin.photos@gmail.com</a>.
-            </p>
-        </div>
-        <div class="right-column">
-            <img src="../photos/portfolio/japan/dotonbori-alley.jpg" alt="About Image">
-        </div>
-    </div>
+        <section class="about-cta">
+            <h2 class="oswald">Have a Vision?</h2>
+            <p class="merriweather-regular">If you have a creative project or an event you'd like to bring to life, I'd love to learn more about it. Let's start the conversation.</p>
+            <a href="mailto:jeffmartin.photos@gmail.com" class="cta-button oswald">Start the Conversation</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; Jeff Martin 2017 - 2024</p>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
     </footer>
 
-    <script src="../scripts/common.js"></script>
+    <script src="../scripts/main.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,218 @@
+/* General page structure */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* Hero Section */
+.work-hero {
+    text-align: center;
+    padding: 48px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 48px;
+}
+
+.work-hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.work-hero .subtitle {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.service-card-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;       /* Makes text use the color defined by other styles */
+}
+
+.card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 48px 24px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 64px;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.testimonials blockquote {
+    margin: 0 auto;
+    max-width: 650px;
+    border: none;
+}
+
+.testimonials blockquote p {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.testimonials blockquote cite {
+    font-style: normal;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 48px 0;
+    border-top: 1px solid #ddd;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.contact-section p {
+    max-width: 550px;
+    margin: 0 auto 32px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Style the first service card (Photoshoots) with a gradient background */
+.services-grid > .service-card-link:nth-child(1) .service-card {
+    background-image: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    color: #fff;
+}
+
+/* Correctly targets the text ONLY in the first card */
+.services-grid > .service-card-link:nth-child(1) h3,
+.services-grid > .service-card-link:nth-child(1) p {
+    color: #fff;
+}
+
+/* --- Contact Form Styles --- */
+#contact-form-mailto {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px; /* Set a max width for the form */
+    margin: 48px auto 0 auto; /* Center the form and add space above */
+    text-align: left; /* Align text within the form to the left */
+}
+
+.form-group {
+    margin-bottom: 24px; /* Space between each form field */
+}
+
+.form-group label {
+    display: block; /* Make label its own line */
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #444;
+}
+
+#contact-form-mailto input[type="text"],
+#contact-form-mailto input[type="email"],
+#contact-form-mailto textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: "Noto Sans JP", sans-serif; /* Use the site's body font */
+    font-size: 16px;
+    background-color: #fafafa;
+    box-sizing: border-box; /* Ensures padding doesn't break the width */
+    transition: all 0.3s ease;
+}
+
+/* Style for when a user clicks into a field */
+#contact-form-mailto input[type="text"]:focus,
+#contact-form-mailto input[type="email"]:focus,
+#contact-form-mailto textarea:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1); /* Adds a modern focus glow */
+}
+
+/* Make the button full-width within the form */
+#contact-form-mailto .cta-button {
+    width: 100%;
+    border: none; /* Remove default button border */
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+
+    .work-hero h1 {
+        font-size: 36px;
+    }
+
+    .testimonials blockquote p {
+        font-size: 18px;
+    }
+}
+
