@@ -203,4 +203,9 @@
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+    .portfolio-grid {
+        /* Switch to a single column on very small screens to prevent overflow */
+        grid-template-columns: 1fr;
+    }
 }
