@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff Martin Photography</title>
+
+    <!-- Link to stylesheets using the relative path -->
+    <link rel="stylesheet" href="../../../styles/common.css">
+    <link rel="stylesheet" href="../../../styles/menu.css">
+    <link rel="stylesheet" href="../../../styles/gallery-page.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap](https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap)" rel="stylesheet">
+</head>
+<body>
+
+    <script>
+        // --- DEFINE THE BASE PATH ---
+        // This page is 3 levels deep, so we go up 3 times.
+        const basePath = '../../../'; 
+
+        // --- UNIQUE GALLERY DATA ---
+        const galleryData = {
+            title: "Lean & Danielle's Wedding",
+            subtitle: "A spring wedding in Distillery District, Toronto",
+            breadcrumb: {
+                text: "Back to Photoshoots",
+                link: "photoshoots/" // Relative to the root
+            },
+            images: [
+                // Image paths are relative to the root
+                {
+                    src: "photos/weddings-events/thumbnails/lean-day-wedding.jpg",
+                    alt: "The family laughing together on a blanket.",
+                    class: "wide"
+                },
+                {
+                    src: "photos/weddings-events/thumbnails/menu.jpg",
+                    alt: "A portrait of the youngest child.",
+                    class: ""
+                },
+                {
+                    src: "photos/weddings-events/thumbnails/food.jpg",
+                    alt: "A portrait of the youngest child.",
+                    class: ""
+                }
+            ]
+        };
+    </script>
+
+    <!-- This script builds the page and knows where to find everything! -->
+    <script src="../../../js/gallery-loader.js"></script>
+
+</body>
+</html>
