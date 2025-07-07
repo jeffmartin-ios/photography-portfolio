@@ -4,14 +4,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hostname = window.location.hostname;
     const pathname = window.location.pathname;
-    let siteRoot;
+    const siteRoot = '/';
 
-    if (hostname.includes('jeffmartin.photos')) {
-        siteRoot = `/photography-portfolio/`;
-    } else {
-        // We are on a local server or a custom domain. The root is simply "/".
-        siteRoot = '/';
-    }
+    // if (hostname.includes('jeffmartin.photos')) {
+    //     siteRoot = `/photography-portfolio/`;
+    // } else {
+    //     // We are on a local server or a custom domain. The root is simply "/".
+    //     siteRoot = '/';
+    // }
 
     // --- Fetch the Menu ---
     const menuUrl = `${siteRoot}common/menu.html`;
