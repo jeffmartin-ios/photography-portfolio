@@ -1,1 +1,152 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshoots - Jeff Martin Photography</title>
+
+    <!-- Common Stylesheets -->
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+
+    <!-- NEW: Page-specific stylesheet -->
+    <link rel="stylesheet" href="../styles/photoshoots.css">
+
+    <!-- Reusing gallery styles for the lightbox -->
+    <link rel="stylesheet" href="../styles/gallery-page.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="noto-sans-regular">
+
+    <!-- Reusable Menu Components -->
+    <div id="menu-overlay" class="overlay"></div>
+    <div id="menu-placeholder"></div>
+
+    <!-- Section 1: Hero -->
+    <header class="shoots-hero">
+        <div class="hero-content">
+            <h1 class="merriweather-regular">Natural, Authentic Portraits</h1>
+            <p class="oswald">Creative photoshoots for individuals, couples, and families.</p>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <!-- Section 2: Services Offered -->
+        <section class="services-offered">
+            <h2 class="section-title oswald">Photoshoot Services</h2>
+            <div class="service-cards-container">
+                <div class="service-card">
+                    <h3 class="oswald">Portraits &amp; Lifestyle</h3>
+                    <p>Whether for professional headshots, personal branding, or just for you, we'll create images that reflect your true personality.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="oswald">Couples &amp; Engagement</h3>
+                    <p>Let's capture the connection and joy between you and your partner with a fun, relaxed session in a location that's special to you.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="oswald">Family &amp; Maternity</h3>
+                    <p>Creating beautiful, timeless portraits of your family's milestones, from maternity to candid moments with your loved ones.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Gallery Showcase -->
+        <!-- <section class="gallery-showcase">
+             <h2 class="section-title oswald">Portfolio</h2>
+            <div class="photo-grid">
+                <div class="grid-item"><img src=""></div>
+                <div class="grid-item"><img src=""></div>
+                <div class="grid-item"><img src=""></div>
+            </div>
+        </section> -->
+
+        <!-- Section 4: Packages -->
+        <section class="packages-section">
+            <h2 class="section-title oswald">Packages</h2>
+            <p class="merriweather-regular subtitle">Simple, all-inclusive packages designed to provide a complete and beautiful collection of images.</p>
+            <div class="packages-container">
+                <div class="package-card">
+                    <h3>The Portrait Session</h3>
+                    <ul>
+                        <li>60-Minute Session</li>
+                        <li>1 Location</li>
+                        <li>30+ Edited High-Resolution Photos</li>
+                    </ul>
+                </div>
+                <div class="package-card featured">
+                    <h3>The Couples Session</h3>
+                    <ul>
+                        <li>90-Minute Session</li>
+                        <li>Up to 2 Locations</li>
+                        <li>50+ Edited High-Resolution Photos</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="pricing-blurb merriweather-regular">
+                <p>Photoshoot packages begin at $450. Please get in touch for a detailed quote tailored to your photoshoot.</p>
+            </div>
+        </section>
+
+        <!-- Section 5: The Process -->
+        <section class="process-section">
+            <h2 class="section-title oswald">What to Expect</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Planning &amp; Styling</h3>
+                    <p>We'll start with a consultation to plan the location, style, and goals for your shoot, ensuring you feel prepared and confident.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>The Photoshoot</h3>
+                    <p>My goal is to make you feel comfortable and have fun. I'll provide gentle direction to capture you looking your natural best.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Gallery Delivery</h3>
+                    <p>Within 3-4 weeks, you'll receive a link to your private online gallery where you can easily view, share, and download your photos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Service Area -->
+        <section class="service-area">
+            <h2 class="oswald">Local Service Area</h2>
+            <p class="merriweather-regular">
+                I offer photoshoot services across the Greater Toronto Area, including: 
+                <br>
+                <strong>Toronto, Scarborough, North York, Markham, Richmond Hill, Vaughan, and Ajax.</strong>
+            </p>
+        </section>
+
+         <!-- Section 7: Final Call to Action -->
+        <section class="cta-section">
+            <h2 class="oswald">Ready to Create?</h2>
+            <p class="merriweather-regular">If you're ready to book a session or have any questions, I'd love to hear from you.</p>
+            <a href="mailto:jeffmartin.photos@gmail.com?subject=Photoshoot%20Inquiry" class="cta-button oswald">Book a Session</a>
+        </section>
+
+    </main>
+
+    <!-- Lightbox for viewing full-size images -->
+    <div class="zoomed-image"> 
+        <img src="" alt="Zoomed View">
+        <span class="close-button">&times;</span>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Jeff Martin 2017 - 2025</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+
+</body>
+</html>

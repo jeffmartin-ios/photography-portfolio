@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Update the path in this line
-    fetch('/common/_menu.html')
+    fetch('../common/_menu.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
