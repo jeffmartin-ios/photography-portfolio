@@ -1,14 +1,27 @@
-// This script fetches the menu and handles the hamburger functionality.
+// This script automatically detects the environment (localhost vs. GitHub Pages)
+// and builds the correct paths for all assets and links.
 
 document.addEventListener('DOMContentLoaded', () => {
-    // This siteRoot variable MUST be defined in each HTML file.
-    // It should be the path from the domain root to the project root.
-    // e.g., '/photography-portfolio/'
-    const rootPath = typeof siteRoot !== 'undefined' ? siteRoot : '/';
-    
-    // Build the absolute path to the menu file
-    const menuUrl = `${rootPath}common/_menu.html`;
+    const hostname = window.location.hostname;
+    const pathname = window.location.pathname;
+    let siteRoot;
 
+    // Check if we are on a local server or on GitHub Pages
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+        // On localhost, the root is simply "/"
+        siteRoot = '/';
+    } else {
+        // On GitHub Pages, the URL is https://user.github.io/repo-name/
+        // The pathname will be "/repo-name/". We need to extract the repo name.
+        // Example pathname: "/photography-portfolio/about/"
+        const segments = pathname.split('/');
+        // The repository name is the first segment after the initial slash
+        siteRoot = `/${segments[1]}/`;
+    }
+
+    // --- Fetch the Menu ---
+    const menuUrl = `${siteRoot}common/_menu.html`;
+    
     fetch(menuUrl)
         .then(response => {
             if (!response.ok) {
@@ -21,19 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menuPlaceholder) {
                 menuPlaceholder.innerHTML = data;
 
-                // --- Fix Menu Links for GitHub Pages ---
+                // --- Fix All Menu Links ---
+                // This finds all links in the loaded menu and prepends the correct siteRoot.
                 const allLinks = menuPlaceholder.querySelectorAll('a');
                 allLinks.forEach(link => {
                     const href = link.getAttribute('href');
+                    // Check if it's a root-relative link (like "/about/") and not an external link
                     if (href && href.startsWith('/') && !href.startsWith('//')) {
                         // Prepend the siteRoot to the link
-                        link.setAttribute('href', rootPath + href.substring(1));
+                        link.setAttribute('href', siteRoot + href.substring(1));
                     }
                 });
             }
         })
         .then(() => {
-            // --- Hamburger Menu Toggle Logic (remains the same) ---
+            // --- Hamburger Menu Toggle Logic (no changes needed here) ---
             const hamburgerButton = document.getElementById('hamburger-button');
             const menuLinks = document.getElementById('menu-links');
             const closeMenuButton = document.getElementById('close-menu-button');
