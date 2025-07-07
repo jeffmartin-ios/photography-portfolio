@@ -6,17 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const pathname = window.location.pathname;
     let siteRoot;
 
-    // Check if we are on a local server or on GitHub Pages
-    if (hostname === 'localhost' || hostname === '127.0.0.1') {
-        // On localhost, the root is simply "/"
-        siteRoot = '/';
+    // A more robust check for the environment
+    if (hostname.includes('jeffmartin.photos')) {
+        // We are on GitHub Pages. The root path is the repository name.
+        // e.g., /photography-portfolio/
+        const repoName = pathname.split('/')[1] || '';
+        siteRoot = repoName ? `/${repoName}/` : '/';
     } else {
-        // On GitHub Pages, the URL is https://user.github.io/repo-name/
-        // The pathname will be "/repo-name/". We need to extract the repo name.
-        // Example pathname: "/photography-portfolio/about/"
-        const segments = pathname.split('/');
-        // The repository name is the first segment after the initial slash
-        siteRoot = `/${segments[1]}/`;
+        // We are on a local server or a custom domain. The root is simply "/".
+        siteRoot = '/';
     }
 
     // --- Fetch the Menu ---
