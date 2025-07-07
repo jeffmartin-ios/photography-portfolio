@@ -1,14 +1,18 @@
 // This script fetches the menu and handles the hamburger functionality.
 
 document.addEventListener('DOMContentLoaded', () => {
-    // This basePath variable MUST be defined in a <script> tag in each HTML file
-    // before this script is loaded.
-    const pathPrefix = typeof basePath !== 'undefined' ? basePath : './';
+    // This siteRoot variable MUST be defined in each HTML file.
+    // It should be the path from the domain root to the project root.
+    // e.g., '/photography-portfolio/'
+    const rootPath = typeof siteRoot !== 'undefined' ? siteRoot : '/';
     
-    fetch(pathPrefix + 'common/_menu.html')
+    // Build the absolute path to the menu file
+    const menuUrl = `${rootPath}common/_menu.html`;
+
+    fetch(menuUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Could not load menu. Status: ${response.status}`);
+                throw new Error(`Could not load menu from ${menuUrl}. Status: ${response.status}`);
             }
             return response.text();
         })
@@ -18,20 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuPlaceholder.innerHTML = data;
 
                 // --- Fix Menu Links for GitHub Pages ---
-                // This finds all links in the loaded menu and prepends the correct base path.
                 const allLinks = menuPlaceholder.querySelectorAll('a');
                 allLinks.forEach(link => {
                     const href = link.getAttribute('href');
-                    // Check if it's a root-relative link (starts with /) and not an external link (//)
                     if (href && href.startsWith('/') && !href.startsWith('//')) {
-                        // Remove the leading '/' and prepend the correct path
-                        link.setAttribute('href', pathPrefix + href.substring(1));
+                        // Prepend the siteRoot to the link
+                        link.setAttribute('href', rootPath + href.substring(1));
                     }
                 });
             }
         })
         .then(() => {
-            // --- Hamburger Menu Toggle Logic ---
+            // --- Hamburger Menu Toggle Logic (remains the same) ---
             const hamburgerButton = document.getElementById('hamburger-button');
             const menuLinks = document.getElementById('menu-links');
             const closeMenuButton = document.getElementById('close-menu-button');
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching or processing menu:', error);
             const menuPlaceholder = document.getElementById('menu-placeholder');
             if(menuPlaceholder) {
-                menuPlaceholder.innerHTML = '<p style="color:red; text-align:center;">Could not load navigation menu.</p>';
+                menuPlaceholder.innerHTML = `<p style="color:red; text-align:center;">Could not load navigation menu.</p>`;
             }
         });
 });
