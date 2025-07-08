@@ -1,0 +1,191 @@
+/* --- Fonts --- */
+/* Body text uses Lora, Headings use Oswald (from common.css) */
+.blog-container {
+    font-family: 'Lora', serif;
+}
+
+/* --- Blog Index Page --- */
+.blog-hero {
+    text-align: center;
+    padding: 64px 0;
+    border-bottom: 1px solid #eee;
+}
+.blog-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.blog-hero p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post-list-container {
+    margin-top: 64px;
+}
+
+/* --- UPDATED: Clickable Post Preview Card --- */
+.post-preview-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px; /* For the shadow effect */
+}
+.post-preview-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.post-preview-card {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 64px;
+}
+.post-preview-link:last-child .post-preview-card {
+    border-bottom: none;
+}
+
+.post-preview-image {
+    flex: 1;
+    min-width: 300px;
+}
+.post-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.post-preview-content {
+    flex: 2;
+}
+.post-preview-content .post-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+}
+.post-preview-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin: 8px 0 16px 0;
+    color: #333; /* Color is now on the h2 directly */
+}
+.post-preview-content .post-subtitle {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+.post-preview-content .read-more {
+    display: inline-block;
+    margin-top: 24px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* --- Blog Post Page --- */
+.post-header {
+    text-align: center;
+    padding: 48px 0;
+    margin-bottom: 48px;
+}
+.post-header .post-meta {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 1px;
+}
+.post-header .post-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    margin: 8px 0 16px 0;
+}
+.post-header .post-subtitle {
+    font-size: 20px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.post-hero-image {
+    margin-bottom: 64px;
+}
+.post-hero-image img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.post-content {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 19px; /* Larger font for readability */
+    line-height: 1.8;
+    color: #333;
+}
+.post-content h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.post-content p {
+    margin-bottom: 1.5em;
+}
+.post-content blockquote {
+    border-left: 3px solid #ddd;
+    padding-left: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    color: #555;
+}
+.post-content .post-gallery {
+    margin: 64px 0;
+}
+.post-gallery .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+}
+
+/* --- Rule to fix oversized images in the gallery --- */
+.post-gallery .photo-grid .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .post-preview-card {
+        flex-direction: column;
+    }
+    .post-header .post-title { font-size: 36px; }
+    .post-content { font-size: 17px; }
+    
+    .post-gallery .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+}
+
+/* Added for smaller mobile screens */
+@media (max-width: 480px) {
+    .post-gallery .photo-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+}
