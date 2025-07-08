@@ -24,19 +24,38 @@
 .menu-title {
     font-size: 24px;
     color: #333;
+    /* UPDATED: Changed transition for a new effect */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+/* --- UPDATED: Header Title Hover Animation --- */
+.menu-top a:hover .menu-title {
+    color: #000;
+    transform: translateY(-1px); /* Adds a subtle lift effect */
+}
+
 
 /* Hamburger button styles */
 .hamburger {
     display: block;
     cursor: pointer;
-    padding: 15px; /* Increased padding for easier clicking */
+    padding: 15px;
     background: none;
     border: none;
     outline: none;
-    z-index: 210; /* Ensures it's above the overlay when menu is closed */
+    z-index: 210;
     position: relative;
+    transition: transform 0.3s ease;
 }
+
+/* Hamburger Hover & Click Animations */
+.hamburger:hover {
+    transform: scale(1.1);
+}
+.hamburger:active {
+    transform: scale(0.95) rotate(5deg);
+}
+
 
 /* Styles for the hamburger icon lines */
 .hamburger-icon {
@@ -44,12 +63,11 @@
     height: 3px;
     background-color: #333;
     margin: 5px 0;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Added fancy transition */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     border-radius: 2px;
 }
 
-/* --- NEW: Hamburger Icon Animation --- */
-/* When the menu is open, transform the hamburger into an 'X' */
+/* Hamburger Icon Animation to 'X' */
 .menu-links.open ~ .menu .hamburger-icon:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
 }
@@ -72,8 +90,8 @@
     box-shadow: -4px 0 10px rgba(0,0,0,0.2);
     list-style: none;
     margin: 0;
-    padding: 80px 30px 30px 30px; /* Increased top padding for space */
-    transition: right 0.4s ease-in-out; /* Slightly slower transition */
+    padding: 80px 30px 30px 30px;
+    transition: right 0.4s ease-in-out;
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -89,13 +107,12 @@
     display: block;
     margin-bottom: 25px;
     font-size: 22px;
-    opacity: 0; /* Initially hidden for animation */
-    transform: translateX(20px); /* Initially shifted for animation */
+    opacity: 0;
+    transform: translateX(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* --- NEW: Staggered Link Animation --- */
-/* When menu opens, fade and slide in each link with a delay */
+/* Staggered Link Animation */
 .menu-links.open li {
     opacity: 1;
     transform: translateX(0);
@@ -107,15 +124,15 @@
 .menu-links.open li:nth-child(5) { transition-delay: 0.3s; }
 .menu-links.open li:nth-child(6) { transition-delay: 0.35s; }
 .menu-links.open li:nth-child(7) { transition-delay: 0.4s; }
-.menu-links.open li:nth-child(8) { transition-delay: 0.45s; } /* For social links */
+.menu-links.open li:nth-child(8) { transition-delay: 0.45s; }
 
 
-/* --- UPDATED: Link styling for new hover effect --- */
+/* Link styling for hover effect */
 .menu-links a {
     text-decoration: none;
     color: #707070;
-    display: block; /* Makes the entire row clickable */
-    padding: 8px 12px; /* Adds some space around the text */
+    display: block;
+    padding: 8px 12px;
     border-radius: 4px;
     background: linear-gradient(to right, #f0f0f0, #f0f0f0);
     background-size: 0% 100%;
@@ -129,15 +146,10 @@
     background-size: 100% 100%;
 }
 
-
-/* --- REMOVED: Underline Hover Effect --- */
-/* The old .menu-links a::after rule has been deleted. */
-
-
 #menu-link-active {
     color: #222;
-    font-weight: 600; /* CHANGED: Softer bold */
-    background-color: #f0f0f0; /* Give the active link a permanent background */
+    font-weight: 600;
+    background-color: #f0f0f0;
 }
 
 /* Close button for the off-canvas menu */
@@ -152,7 +164,19 @@
     background: none;
     border: none;
     outline: none;
+    padding: 10px; /* Add padding for easier clicking */
+    transition: transform 0.3s ease, color 0.3s ease; /* NEW: Added transition */
 }
+
+/* Close Icon Hover & Click Animations */
+.close-menu:hover {
+    transform: rotate(90deg);
+    color: #bda57e; /* Elegant gold color on hover */
+}
+.close-menu:active {
+    transform: rotate(90deg) scale(0.9);
+}
+
 
 /* Overlay for main content when menu is open */
 .overlay {
@@ -171,7 +195,7 @@
     display: block;
 }
 
-/* --- NEW: Social Links Styles in Menu --- */
+/* Social Links Styles in Menu */
 .social-links-item {
     margin-top: auto;
     padding-top: 20px;
@@ -184,8 +208,8 @@
 .social-links-container a {
     color: #707070;
     transition: color 0.4s ease;
-    padding: 0; /* Remove padding for icon-only links */
-    background: none; /* Remove background effect for icons */
+    padding: 0;
+    background: none;
 }
 .social-links-container a:hover {
     color: #222;
@@ -195,7 +219,7 @@
     height: 22px;
 }
 
-/* --- NEW: Limited Time Tag Styles --- */
+/* Limited Time Tag Styles */
 .limited-time-tag {
     display: inline-block;
     margin-left: 8px;
