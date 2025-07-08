@@ -12,13 +12,11 @@
     border-bottom: 1px solid #ddd;
     margin-bottom: 48px;
 }
-
 .work-hero h1 {
     font-size: 48px;
     margin-bottom: 16px;
     font-weight: 400;
 }
-
 .work-hero .subtitle {
     font-size: 18px;
     max-width: 700px;
@@ -27,12 +25,33 @@
     color: #555;
 }
 
-/* Services Section */
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* --- UPDATED: Services Section (2x2 Grid) --- */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 24px;
     margin-bottom: 64px;
+}
+
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-card {
@@ -44,8 +63,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    height: 100%; /* Ensures all cards in a row are the same height */
+    /* NEW: Default background for cards without a valid image */
+    background-image: linear-gradient(145deg, #f0f2f5 0%, #e6e9f0 100%);
 }
-
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0,0,0,0.1);
@@ -56,12 +77,15 @@
     height: 220px;
     object-fit: cover;
     display: block;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents image from shrinking */
+    /* REMOVED: background-color: #fff; */
+    position: relative; /* Ensures image sits on top of the gradient */
+    z-index: 2;
 }
 
-.service-card-link {
-    text-decoration: none; /* Removes the underline */
-    color: inherit;       /* Makes text use the color defined by other styles */
+/* NEW: Hides the image tag ONLY if its src attribute is empty */
+.service-card img[src=""] {
+    display: none;
 }
 
 .card-content {
@@ -70,53 +94,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative; /* Ensures text sits on top of the gradient */
+    z-index: 2;
 }
-
 .card-content h3 {
     font-size: 22px;
     margin-top: 0;
     margin-bottom: 12px;
 }
-
 .card-content p {
     color: #555;
     line-height: 1.5;
     font-size: 15px;
-}
-
-/* Testimonials Section */
-.testimonials {
-    text-align: center;
-    padding: 48px 24px;
-    background-color: #fafafa;
-    border-radius: 8px;
-    margin-bottom: 64px;
-}
-
-.testimonials h2 {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 24px;
-}
-
-.testimonials blockquote {
-    margin: 0 auto;
-    max-width: 650px;
-    border: none;
-}
-
-.testimonials blockquote p {
-    font-size: 22px;
-    font-style: italic;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 16px;
-}
-
-.testimonials blockquote cite {
-    font-style: normal;
-    font-weight: bold;
-    color: #333;
 }
 
 /* Contact Section */
@@ -125,12 +114,10 @@
     padding: 48px 0;
     border-top: 1px solid #ddd;
 }
-
 .contact-section h2 {
     font-size: 32px;
     margin-bottom: 16px;
 }
-
 .contact-section p {
     max-width: 550px;
     margin: 0 auto 32px auto;
@@ -138,39 +125,24 @@
     line-height: 1.6;
 }
 
-/* Style the first service card (Photoshoots) with a gradient background */
-.services-grid > .service-card-link:nth-child(1) .service-card {
-    background-image: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
-    color: #fff;
-}
-
-/* Correctly targets the text ONLY in the first card */
-.services-grid > .service-card-link:nth-child(1) h3,
-.services-grid > .service-card-link:nth-child(1) p {
-    color: #fff;
-}
-
-/* --- Contact Form Styles --- */
+/* Contact Form Styles */
 #contact-form-mailto {
     display: flex;
     flex-direction: column;
-    max-width: 700px; /* Set a max width for the form */
-    margin: 48px auto 0 auto; /* Center the form and add space above */
-    text-align: left; /* Align text within the form to the left */
+    max-width: 700px;
+    margin: 48px auto 0 auto;
+    text-align: left;
 }
-
 .form-group {
-    margin-bottom: 24px; /* Space between each form field */
+    margin-bottom: 24px;
 }
-
 .form-group label {
-    display: block; /* Make label its own line */
+    display: block;
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 15px;
     color: #444;
 }
-
 #contact-form-mailto input[type="text"],
 #contact-form-mailto input[type="email"],
 #contact-form-mailto textarea {
@@ -178,26 +150,22 @@
     padding: 14px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-family: "Noto Sans JP", sans-serif; /* Use the site's body font */
+    font-family: "Noto Sans JP", sans-serif;
     font-size: 16px;
     background-color: #fafafa;
-    box-sizing: border-box; /* Ensures padding doesn't break the width */
+    box-sizing: border-box;
     transition: all 0.3s ease;
 }
-
-/* Style for when a user clicks into a field */
 #contact-form-mailto input[type="text"]:focus,
 #contact-form-mailto input[type="email"]:focus,
 #contact-form-mailto textarea:focus {
     outline: none;
     border-color: #333;
-    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1); /* Adds a modern focus glow */
+    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
 }
-
-/* Make the button full-width within the form */
 #contact-form-mailto .cta-button {
     width: 100%;
-    border: none; /* Remove default button border */
+    border: none;
     cursor: pointer;
 }
 
@@ -206,13 +174,4 @@
     .services-grid {
         grid-template-columns: 1fr; /* Stack cards vertically */
     }
-
-    .work-hero h1 {
-        font-size: 36px;
-    }
-
-    .testimonials blockquote p {
-        font-size: 18px;
-    }
 }
-
