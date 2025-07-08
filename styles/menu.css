@@ -1,13 +1,13 @@
 /* Base styles for the navigation menu container */
 .menu {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     padding: 10px;
     text-transform: uppercase;
-    background-color: #f5f5f5; /* Kept from previous fix */
+    background-color: #f5f5f5;
     position: relative;
-    z-index: 100; /* CHANGED: Set below the overlay's z-index of 150 */
+    z-index: 100;
 }
 
 .menu-top {
@@ -17,19 +17,25 @@
     width: 100%;
 }
 
+.menu-top a {
+    text-decoration: none;
+}
+
 .menu-title {
     font-size: 24px;
     color: #333;
 }
 
-/* Hamburger button styles - always block now */
+/* Hamburger button styles */
 .hamburger {
-    display: block; /* Always show hamburger */
+    display: block;
     cursor: pointer;
-    padding: 5px;
+    padding: 15px; /* Increased padding for easier clicking */
     background: none;
     border: none;
     outline: none;
+    z-index: 210; /* Ensures it's above the overlay when menu is closed */
+    position: relative;
 }
 
 /* Styles for the hamburger icon lines */
@@ -38,24 +44,36 @@
     height: 3px;
     background-color: #333;
     margin: 5px 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Added fancy transition */
     border-radius: 2px;
 }
 
-/* Menu links container - off-canvas sidebar for all screen sizes */
+/* --- NEW: Hamburger Icon Animation --- */
+/* When the menu is open, transform the hamburger into an 'X' */
+.menu-links.open ~ .menu .hamburger-icon:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-links.open ~ .menu .hamburger-icon:nth-child(2) {
+    opacity: 0;
+}
+.menu-links.open ~ .menu .hamburger-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+/* Menu links container - off-canvas sidebar */
 .menu-links {
     position: fixed;
     top: 0;
-    right: -300px; /* CHANGED: Match the declared width */
+    right: -320px;
     width: 300px;
     height: 100%;
     background-color: #fff;
     box-shadow: -4px 0 10px rgba(0,0,0,0.2);
     list-style: none;
     margin: 0;
-    padding: 20px;
-    padding-top: 60px;
-    transition: right 0.3s ease-in-out;
+    padding: 80px 30px 30px 30px; /* Increased top padding for space */
+    transition: right 0.4s ease-in-out; /* Slightly slower transition */
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -63,37 +81,63 @@
     box-sizing: border-box;
 }
 
-/* Class to show the off-canvas menu */
 .menu-links.open {
-    right: 0; /* Slide into view */
+    right: 0;
 }
 
 .menu-links li {
-    display: block; /* Make list items stack vertically */
-    margin-bottom: 20px;
-    font-size: 20px;
+    display: block;
+    margin-bottom: 25px;
+    font-size: 22px;
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateX(20px); /* Initially shifted for animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* --- NEW: Staggered Link Animation --- */
+/* When menu opens, fade and slide in each link with a delay */
+.menu-links.open li {
+    opacity: 1;
+    transform: translateX(0);
+}
+.menu-links.open li:nth-child(1) { transition-delay: 0.1s; }
+.menu-links.open li:nth-child(2) { transition-delay: 0.15s; }
+.menu-links.open li:nth-child(3) { transition-delay: 0.2s; }
+.menu-links.open li:nth-child(4) { transition-delay: 0.25s; }
+.menu-links.open li:nth-child(5) { transition-delay: 0.3s; }
+.menu-links.open li:nth-child(6) { transition-delay: 0.35s; }
+.menu-links.open li:nth-child(7) { transition-delay: 0.4s; }
+.menu-links.open li:nth-child(8) { transition-delay: 0.45s; } /* For social links */
+
+
+/* --- UPDATED: Link styling for new hover effect --- */
 .menu-links a {
     text-decoration: none;
     color: #707070;
-    transition: color 0.4s ease;
-    display: block;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.menu-links li:last-child a {
-    border-bottom: none;
+    display: block; /* Makes the entire row clickable */
+    padding: 8px 12px; /* Adds some space around the text */
+    border-radius: 4px;
+    background: linear-gradient(to right, #f0f0f0, #f0f0f0);
+    background-size: 0% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease, color 0.4s ease;
 }
 
 .menu-links a:hover {
-    color: #222;
+    color: #333;
+    background-size: 100% 100%;
 }
+
+
+/* --- REMOVED: Underline Hover Effect --- */
+/* The old .menu-links a::after rule has been deleted. */
+
 
 #menu-link-active {
     color: #222;
-    font-weight: bold;
+    font-weight: 600; /* CHANGED: Softer bold */
+    background-color: #f0f0f0; /* Give the active link a permanent background */
 }
 
 /* Close button for the off-canvas menu */
@@ -127,37 +171,47 @@
     display: block;
 }
 
-.menu-top a {
-    text-decoration: none;
-}
-
-/* This new list item holds the social links */
+/* --- NEW: Social Links Styles in Menu --- */
 .social-links-item {
-    margin-top: auto; /* Magic! Pushes this item to the bottom of the flex container */
-    margin-bottom: 0; /* Override default li margin */
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
 }
-
-/* New style for the container inside the sidebar */
 .social-links-container {
-    display: flex; /* Arrange links in a row */
-    gap: 24px; /* Space between current and future icons */
-    padding-top: 20px; /* Space above the social links */
-    border-top: 1px solid #eee; /* Visual separator from nav links */
+    display: flex;
+    gap: 24px;
 }
-
-/* General styling for all social links inside the container */
 .social-links-container a {
-    color: #707070; /* Match the color of other menu links */
+    color: #707070;
     transition: color 0.4s ease;
+    padding: 0; /* Remove padding for icon-only links */
+    background: none; /* Remove background effect for icons */
 }
-
-/* Hover effect */
 .social-links-container a:hover {
-    color: #222; /* Match hover color of other menu links */
+    color: #222;
 }
-
-/* Controls the size of the icons */
 .social-links-container svg {
     width: 22px;
     height: 22px;
+}
+
+/* --- NEW: Limited Time Tag Styles --- */
+.limited-time-tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    color: #fff;
+    background-color: #bda57e;
+    border-radius: 4px;
+    vertical-align: middle;
+    animation: pulse-effect 2.5s infinite;
+}
+@keyframes pulse-effect {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(189, 165, 126, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(189, 165, 126, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(189, 165, 126, 0); }
 }

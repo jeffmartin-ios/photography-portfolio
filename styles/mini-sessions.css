@@ -1,0 +1,208 @@
+/* Hero Section */
+.mini-hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    background-image: linear-gradient(135deg, #2c5364 0%, #203a43 50%, #0f2027 100%);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+}
+.hero-content p {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* General page structure */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 80px;
+    margin-bottom: 48px;
+    color: #004d40; /* Deep Forest Green */
+}
+
+/* Intro Text Section */
+.intro-text {
+    text-align: center;
+    padding: 48px 0;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.intro-text h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Current Offering Section */
+.current-offering {
+    padding: 64px 0;
+}
+.offering-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #004d40; /* Green border */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.offering-details {
+    flex: 2;
+    padding: 40px;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+.offering-details h3 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #004d40; /* Green heading */
+}
+.offering-details .price-display {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 24px;
+}
+.offering-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    color: #444;
+    line-height: 1.8;
+}
+.offering-details li {
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+.offering-details li::before {
+    content: '✓';
+    color: #bda57e; /* Gold checkmark */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+.offering-details .cta-button {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* --- UPDATED STYLES for offering-info section --- */
+.offering-info {
+    flex: 1;
+    padding: 40px;
+    background-color: #f7f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.offering-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 32px;
+}
+
+.info-item {
+    display: flex; /* Aligns icon and text */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 16px; /* Space between icon and text */
+    margin-bottom: 24px;
+}
+
+.info-icon {
+    flex-shrink: 0; /* Prevents icon from shrinking */
+    color: #bda57e; /* Gold icon color */
+    margin-top: 3px;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 14px;
+    color: #004d40;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.info-note {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    font-style: italic;
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px dashed #dce5e4;
+}
+
+
+/* Gallery Showcase Section */
+.gallery-showcase .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
+}
+/* Placeholder styles for empty gallery */
+.gallery-showcase .grid-item:nth-child(odd) { background-image: linear-gradient(135deg, #e9e9e9 0%, #f5f5f5 100%); }
+.gallery-showcase .grid-item:nth-child(even) { background-image: linear-gradient(135deg, #f5f5f5 0%, #e9e9e9 100%); }
+.gallery-showcase .grid-item { border-radius: 4px; }
+
+
+/* Waitlist Section */
+.waitlist-section {
+    text-align: center;
+    padding: 64px 24px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-top: 80px;
+}
+.waitlist-section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.waitlist-section p {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mini-hero h1 { font-size: 36px; }
+    .offering-card { flex-direction: column; }
+    .offering-details { border-right: none; border-bottom: 1px solid #e0e0e0; }
+    .gallery-showcase .photo-grid { grid-template-columns: 1fr; }
+}
