@@ -1,17 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9K77TBE93N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-9K77TBE93N');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photoshoots - Jeff Martin Photography</title>
@@ -19,8 +8,9 @@
     <!-- Common Stylesheets -->
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 
-    <!-- NEW: Page-specific stylesheet -->
+    <!-- Page-specific stylesheet -->
     <link rel="stylesheet" href="../styles/photoshoots.css">
 
     <!-- Reusing gallery styles for the lightbox -->
@@ -46,28 +36,15 @@
     </header>
 
     <main class="content-wrapper">
-        <!-- Section 2: Services Offered -->
-        <section class="services-offered">
-            <h2 class="section-title oswald">Photoshoot Services</h2>
-            <div class="service-cards-container">
-                <div class="service-card">
-                    <h3 class="oswald">Portraits &amp; Lifestyle</h3>
-                    <p>Whether for professional headshots, personal branding, or just for you, we'll create images that reflect your true personality.</p>
-                </div>
-                <div class="service-card">
-                    <h3 class="oswald">Couples &amp; Engagement</h3>
-                    <p>Let's capture the connection and joy between you and your partner with a fun, relaxed session in a location that's special to you.</p>
-                </div>
-                <div class="service-card">
-                    <h3 class="oswald">Family &amp; Maternity</h3>
-                    <p>Creating beautiful, timeless portraits of your family's milestones, from maternity to candid moments with your loved ones.</p>
-                </div>
-            </div>
+        <!-- Section 2: Introductory Text -->
+        <section class="intro-text merriweather-regular">
+            <h2>For Life's Milestones &amp; Everyday Moments</h2>
+            <p>Whether for professional headshots, an engagement, or capturing your family's latest chapter, I create a relaxed and fun atmosphere to produce photos that reflect your true personality and connection.</p>
         </section>
 
         <!-- Section 3: Gallery Showcase -->
         <!-- <section class="gallery-showcase">
-             <h2 class="section-title oswald">Portfolio</h2>
+            <h2 class="section-title oswald">Portfolio</h2>
             <div class="photo-grid">
                 <div class="grid-item"><img src=""></div>
                 <div class="grid-item"><img src=""></div>
@@ -77,50 +54,58 @@
 
         <!-- Section 4: Packages -->
         <section class="packages-section">
-            <h2 class="section-title oswald">Packages</h2>
+            <h2 class="section-title oswald">Photoshoot Collections</h2>
             <p class="merriweather-regular subtitle">Simple, all-inclusive packages designed to provide a complete and beautiful collection of images.</p>
-            <div class="packages-container">
+            
+            <div class="packages-grid">
+                <!-- Package 1 -->
                 <div class="package-card">
-                    <h3>The Portrait Session</h3>
+                    <h3>The Portrait</h3>
+                    <p class="price-display">$525</p>
                     <ul>
                         <li>60-Minute Session</li>
                         <li>1 Location</li>
-                        <li>30+ Edited High-Resolution Photos</li>
+                        <li>20+ Edited High-Resolution Photos</li>
+                        <li>Private Online Gallery</li>
                     </ul>
                 </div>
+                <!-- Package 2 -->
                 <div class="package-card featured">
-                    <h3>The Couples Session</h3>
+                    <h3>The Couple</h3>
+                    <p class="price-display">$650</p>
                     <ul>
                         <li>90-Minute Session</li>
                         <li>Up to 2 Locations</li>
-                        <li>50+ Edited High-Resolution Photos</li>
+                        <li>40+ Edited High-Resolution Photos</li>
+                        <li>Private Online Gallery</li>
+                    </ul>
+                </div>
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <h3>The Family</h3>
+                    <p class="price-display">$750</p>
+                    <ul>
+                        <li>Up to 2 Hours</li>
+                        <li>Up to 2 Locations</li>
+                        <li>60+ Edited High-Resolution Photos</li>
+                        <li>Private Online Gallery</li>
                     </ul>
                 </div>
             </div>
-             <div class="pricing-blurb merriweather-regular">
-                <p>Photoshoot packages begin at $450. Please get in touch for a detailed quote tailored to your photoshoot.</p>
-            </div>
+
+            <!-- Tax disclaimer added -->
+            <!-- <div class="tax-note merriweather-regular">
+                <p>All prices are subject to Harmonized Sales Tax (HST).</p>
+            </div> -->
         </section>
 
         <!-- Section 5: The Process -->
         <section class="process-section">
             <h2 class="section-title oswald">What to Expect</h2>
             <div class="process-steps">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h3>Planning &amp; Styling</h3>
-                    <p>We'll start with a consultation to plan the location, style, and goals for your shoot, ensuring you feel prepared and confident.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h3>The Photoshoot</h3>
-                    <p>My goal is to make you feel comfortable and have fun. I'll provide gentle direction to capture you looking your natural best.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h3>Gallery Delivery</h3>
-                    <p>Within 3-4 weeks, you'll receive a link to your private online gallery where you can easily view, share, and download your photos.</p>
-                </div>
+                <div class="step-card"><div class="step-number">01</div><h3>Planning &amp; Styling</h3><p>We'll start with a consultation to plan the location, style, and goals for your shoot, ensuring you feel prepared and confident.</p></div>
+                <div class="step-card"><div class="step-number">02</div><h3>The Photoshoot</h3><p>My goal is to make you feel comfortable and have fun. I'll provide gentle direction to capture you looking your natural best.</p></div>
+                <div class="step-card"><div class="step-number">03</div><h3>Gallery Delivery</h3><p>Within 3-4 weeks, you'll receive a link to your private online gallery where you can easily view, share, and download your photos.</p></div>
             </div>
         </section>
 
@@ -149,10 +134,8 @@
         <span class="close-button">&times;</span>
     </div>
     
-    <!-- Footer -->
-    <footer>
-        <p>&copy; Jeff Martin 2017 - 2025</p>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="../scripts/main.js"></script>

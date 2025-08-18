@@ -106,3 +106,17 @@ a img:hover {
 .cta-button:hover {
     background-color: #555;
 }
+
+.tax-note {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+}
+.tax-note p {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    max-width: 450px;
+    margin: 0 auto;
+}
